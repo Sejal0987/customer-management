@@ -1,6 +1,17 @@
-<div class="row">
+<div class="row" style="margin: 0;">
   <div class="col-lg-8">
-    <div style="height:200px;border: 3px solid ;margin: 10px ;"></div>
+    <div style="height:200px;border: 3px solid ;margin: 10px;padding: 6px;">
+      <div class="row" style="height: 100%;width: 100%;">
+        <div class="col-lg-8" style="height: inherit;">
+          <img [src]="data.img" style="height:100%;width: 100%;"></div>
+        <div class="col-lg-4">
+          <h1 style="text-align:center;font-weight: 900;">{{data.name}}</h1>
+          <h3 style="text-align: center;" >{{data.address}}</h3>
+        </div>
+        </div>
+
+      </div>
+
   </div>
   <div class="col-lg-4">
     <div class="row" style="height:200px;border:2px solid ;margin: 10px;padding: 3px;">

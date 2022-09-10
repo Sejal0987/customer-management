@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-turf',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./turf.component.css']
 })
 export class TurfComponent implements OnInit {
-
+  @Input()data:any;
   constructor() { }
 
   ngOnInit(): void {
