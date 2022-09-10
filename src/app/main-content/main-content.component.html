@@ -1,0 +1,48 @@
+<!-- <p>Hello, {{socialUser.name}}!</p>
+          <br>
+          <p>Your email: {{socialUser.email}}</p>
+          <br>
+          <button mat-raised-button (click)="logout()">Logout</button> -->
+<app-carousel></app-carousel>
+<div class="row" style="padding: 20px 80px">
+  <div class="col-lg-4">
+    <a [routerLink]="['/booking', 'FootBall']">
+      <div class="card bg-transparent">
+        <div class="card-header">FootBall</div>
+        <div class="card-body" style="display: flex; justify-content: center">
+          <img
+            class="thingimg change2"
+            src="https://cdn.britannica.com/51/190751-050-147B93F7/soccer-ball-goal.jpg?q=60"
+          />
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-lg-4">
+    <a [routerLink]="['/booking', 'Cricket']">
+    <div class="card bg-transparent">
+      <div class="card-header">Cricket</div>
+      <div class="card-body" style="display: flex; justify-content: center">
+        <img
+          class="thingimg change2"
+          src="https://www.myvuenews.com/wp-content/uploads/2018/05/oXM-zM_3.jpg"
+        />
+      </div>
+    </div>
+  </a>
+  </div>
+  <div class="col-lg-4">
+    <a [routerLink]="['/booking', 'BasketBall']">
+    <div class="card bg-transparent">
+      <div class="card-header">BasketBall</div>
+      <div class="card-body" style="display: flex; justify-content: center">
+        <img
+          class="thingimg change2"
+          src="https://thumbs.dreamstime.com/b/basketball-14860425.jpg"
+        />
+      </div>
+    </div>
+  </a>
+  </div>
+</div>

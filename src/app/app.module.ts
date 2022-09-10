@@ -15,6 +15,10 @@ import {AuthGuardService} from './auth-guard.service';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { CustomCardComponent } from './custom-card/custom-card.component';
+import { BookingComponent } from './booking/booking.component';
+import { MainContentComponent } from './main-content/main-content.component';
+import { TurfComponent } from './turf/turf.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +27,20 @@ import { CarouselComponent } from './carousel/carousel.component';
     MainPageComponent,
     FooterComponent,
     HeaderComponent,
-    CarouselComponent
+    CarouselComponent,
+    CustomCardComponent,
+    BookingComponent,
+    MainContentComponent,
+    TurfComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent},
+      {path:'booking/:name',component:BookingComponent},
       {path: 'mainpage', component: MainPageComponent, canActivate: [AuthGuardService]},
-      {path: '**', component: LoginComponent}
+      {path: '**', component: LoginComponent},
+
     ]),
     BrowserAnimationsModule,
     MatCardModule,
@@ -46,7 +56,7 @@ import { CarouselComponent } from './carousel/carousel.component';
       providers: [
         {
           id: GoogleLoginProvider.PROVIDER_ID,
-          
+
           provider: new GoogleLoginProvider('148517665605-jspahbqleats6lvlag9kasc2c11b5g7o.apps.googleusercontent.com')
         }
       ]

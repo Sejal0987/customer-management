@@ -2,7 +2,6 @@
 .parahead{
   font-size: 20px;
   color:#dee3e2;
-
   font-family:'Dancing Script', cursive;
   text-shadow: 3px 3px 3px #d1cebd;
 
@@ -30,8 +29,7 @@
   text-shadow: 5px 5px 5px black;
 }
 .texthouse{
-  padding:30px 70px;
+  padding:10px 20px;
   border: 5px solid black;
-  border-color:#dee3e2;
   margin: 3px 30px;
 }

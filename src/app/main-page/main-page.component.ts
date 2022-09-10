@@ -12,6 +12,7 @@ export class MainPageComponent {
   constructor(@Inject(Router) private router: Router,
   @Inject(SocialAuthService) public socialAuthServive: SocialAuthService) {
   }
+  clickable:boolean=false
 
   logout(): void {
     this.socialAuthServive.signOut().then(() => this.router.navigate(['login']));
