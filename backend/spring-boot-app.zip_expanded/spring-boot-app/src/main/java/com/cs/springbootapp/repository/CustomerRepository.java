@@ -5,11 +5,11 @@ import java.util.List;
 import com.cs.springbootapp.model.Customer;
 
 public interface CustomerRepository {
-    public Customer saveCustomer(Customer employee);
-	
-	public Customer getCustomer(int id);
-	
-	public boolean deleteCustomer(int id);
-	
-	public List<Customer> getCustomer();
+    public Customer getCustomer(int customer_id);
+    public Customer saveCustomer(Customer customer);
+    public boolean deleteCustomer(int customer_id);
+    public List<Customer> getAllCustomers();
+
+
+    
 }

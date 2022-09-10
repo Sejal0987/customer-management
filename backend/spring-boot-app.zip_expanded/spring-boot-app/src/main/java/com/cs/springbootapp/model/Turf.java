@@ -1,6 +1,9 @@
 package com.cs.springbootapp.model;
 
-import java.util.ArrayList;
+
+import java.time.LocalDate;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,12 +12,12 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class Turf {
-
-    private String t_name;
-    private String t_location;
-    private ArrayList<Courts> courts = new ArrayList<Courts>();
-    private ArrayList<String> sports = new ArrayList<String>();
-
+    private int turf_id;
+    private String name;
+    private String location;
+    private Boolean []timeSlotsOfSport;
+    
 
 }

@@ -16,11 +16,27 @@ public class TurfController{
     @Autowired
     private TurfService turfService;
 
-    @GetMapping("/turfs/{sportName}")
-    public List<Turf> showTurfs(@PathVariable String sportName){
-
-        return turfService.getAllTurfs(sportName);
-
+    @GetMapping("/turf/id")
+    public Turf getTurf(@PathVariable int id){
+        return turfService.getTurf(id);
     }
+
+     @GetMapping("/turf/")
+    public List<Turf> getAllTurfs(){
+        return turfService.getAllTurfs();
+    }
+
+     @PostMapping("/turf/")
+    public Turf getTurf(@RequestBody Turf turf){
+        return turfService.saveTurf(turf);
+    }
+
+    @DeleteMapping("/turf/id")
+    public boolean deleteTurf(@PathVariable int id){
+        return turfService.deleteTurf(id);
+    }
+
+
+
 
 }
