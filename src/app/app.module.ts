@@ -12,12 +12,16 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {GoogleLoginProvider, SocialLoginModule} from 'angularx-social-login';
 import {AuthGuardService} from './auth-guard.service';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    MainPageComponent
+    MainPageComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
