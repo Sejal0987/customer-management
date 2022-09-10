@@ -1,5 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import { HttpClient, HttpClientModule} from '@angular/common/http';
 
 import {AppComponent} from './app.component';
 import {RouterModule} from '@angular/router';
@@ -34,6 +35,7 @@ import { TurfComponent } from './turf/turf.component';
     TurfComponent
   ],
   imports: [
+    HttpClient,
     BrowserModule,
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent},
