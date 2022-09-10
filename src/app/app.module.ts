@@ -14,6 +14,7 @@ import {GoogleLoginProvider, SocialLoginModule} from 'angularx-social-login';
 import {AuthGuardService} from './auth-guard.service';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HeaderComponent } from './header/header.component';
     LoginComponent,
     MainPageComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

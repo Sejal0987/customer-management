@@ -1,0 +1,37 @@
+
+.parahead{
+  font-size: 20px;
+  color:#dee3e2;
+
+  font-family:'Dancing Script', cursive;
+  text-shadow: 3px 3px 3px #d1cebd;
+
+  }
+  .paradiv{
+    display: inline-block;
+    background-color: black;
+    margin: 10px 120px;
+    border-radius: 10%;
+    padding: 5px 15px;
+  }
+.imghouse{
+  height: 400px;
+
+}
+#house{
+  padding: 20px 0;
+}
+.phouse
+{
+  font-size: 1.30vw;
+  font-family: "Piedra";
+  color: white;
+  margin: 0 80px;
+  text-shadow: 5px 5px 5px black;
+}
+.texthouse{
+  padding:30px 70px;
+  border: 5px solid black;
+  border-color:#dee3e2;
+  margin: 3px 30px;
+}
