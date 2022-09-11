@@ -21,6 +21,7 @@ import { BookingComponent } from './booking/booking.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { TurfComponent } from './turf/turf.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,6 @@ import { TurfComponent } from './turf/turf.component';
     TurfComponent
   ],
   imports: [
-    HttpClient,
     BrowserModule,
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent},
@@ -49,7 +49,8 @@ import { TurfComponent } from './turf/turf.component';
     MatFormFieldModule,
     MatButtonModule,
     MatInputModule,
-    SocialLoginModule
+    SocialLoginModule,
+    HttpClientModule
   ],
   providers: [{
     provide: 'SocialAuthServiceConfig',

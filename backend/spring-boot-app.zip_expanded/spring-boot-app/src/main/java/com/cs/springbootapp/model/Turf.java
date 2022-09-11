@@ -18,6 +18,6 @@ public class Turf {
     private String name;
     private String location;
     private Boolean []timeSlotsOfSport;
-    
+
 
 }

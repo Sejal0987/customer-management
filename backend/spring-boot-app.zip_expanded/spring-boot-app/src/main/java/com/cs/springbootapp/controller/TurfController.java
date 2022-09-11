@@ -9,8 +9,10 @@ import com.cs.springbootapp.model.*;
 import com.cs.springbootapp.service.TurfService;
 
 
+
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins ={"http://localhost:4200/booking/FootBall","http://localhost:4200"} )
+
 public class TurfController{
 
     @Autowired
@@ -18,6 +20,7 @@ public class TurfController{
 
     @GetMapping("/turf/id")
     public Turf getTurf(@PathVariable int id){
+
         return turfService.getTurf(id);
     }
 

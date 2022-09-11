@@ -9,9 +9,12 @@ import { Turf } from 'app/Turf';
 })
 export class TurfComponent implements OnInit {
   @Input()data:any;
-  constructor(public _turfClient:ClientDataService) { }
+  num:number=0;
+  constructor(public _turfClient:ClientDataService) {
+
+  }
   turfList:Array<Turf>=[];
-  
+
   fetchData(){
     this._turfClient.getAllTurfs().subscribe(
       data=>{
@@ -22,6 +25,10 @@ export class TurfComponent implements OnInit {
   }
   ngOnInit(): void {
   this.fetchData();
+  console.log(this.turfList);
+
+
+
   }
 
 }

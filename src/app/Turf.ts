@@ -1,3 +1,3 @@
 export class Turf{
-    constructor(public id:number,public t_name:string, public t_location:string,  public sports:Array<string>){}
+    constructor(public turf_id:number,public name:string, public location:string,  public timeSlotsOfSport:Array<string>){}
 }

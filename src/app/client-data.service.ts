@@ -10,11 +10,10 @@ import { Turf } from './Turf';
 export class ClientDataService {
 
   constructor(private _http:HttpClient) { }
-  baseUrl = "http://localhost:5000/turfs";
+  baseUrl = "http://localhost:5000/turf/";
 
   getAllTurfs():Observable<Array<Turf>>{
-    console.log(this._http.get<Array<Turf>>(this.baseUrl));
     return this._http.get<Array<Turf>>(this.baseUrl);
   }
-   
+
 }
