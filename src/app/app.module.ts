@@ -43,7 +43,6 @@ import { SlotsComponent } from './slots/slots.component';
       {path: 'login', component: LoginComponent},
       // {path:'booking/:name',component:BookingComponent},
       {path:'turf/501',component:BookingComponent},
-
       {path: 'mainpage', component: MainPageComponent, canActivate: [AuthGuardService]},
       {path: '**', component: LoginComponent},
 
