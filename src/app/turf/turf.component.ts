@@ -11,6 +11,7 @@ export class TurfComponent implements OnInit {
   @Input()data:any;
   num:number=0;
   constructor(public _turfClient:ClientDataService) {
+    this.fetchData();
 
   }
   turfList:Array<Turf>=[];
@@ -22,6 +23,10 @@ export class TurfComponent implements OnInit {
         console.log(data);
       }
     )
+  }
+  sendData(){
+    // console.log(this.turfList);
+    this._turfClient.updateAllTurfs(this.turfList);
   }
   ngOnInit(): void {
   this.fetchData();

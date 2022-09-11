@@ -3,6 +3,7 @@ import com.cs.springbootapp.model.Turf;
 import com.cs.springbootapp.repository.TurfRepository;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,5 +32,10 @@ public class TurfServiceImpl implements TurfService{
 	public List<Turf> getAllTurfs() {
 		return turfrepo.getAllTurfs();
 	}
+  @Override
+  public Map<Integer,Turf> updateAllTurfs(List<Turf> turfs){
+    return turfrepo.updateAllTurfs(turfs);
+  }
+
 
 }

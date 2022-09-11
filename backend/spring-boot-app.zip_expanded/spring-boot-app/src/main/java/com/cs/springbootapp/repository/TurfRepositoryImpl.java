@@ -20,8 +20,8 @@ public class TurfRepositoryImpl implements TurfRepository{
 	public void init() {
         turf_db=new HashMap<>();
         Boolean arr[] = {true,true,true,true,true,true,true,true,true};
-        Boolean arr1[]={true,false,null,false,true,null,false,true,null};
-        Boolean arr2[]={true,false,true,null,null,false,true,true,true};
+        Boolean arr1[]={true,false,false,false,true,false,false,true,true};
+        Boolean arr2[]={true,false,true,false,true,false,true,true,true};
         Turf t1 = new Turf(501,"Four Lions Academy and Turf","New airport road Near dorabjee mall, behind elite tennis academy, Viman Nagar, Pune, Maharashtra 411032",arr);
         Turf t2 = new Turf(502,"Mundhwa Turf Ground","BG Shirke Rd, Somnath Nagar, Kirtane Baug, Mundhwa Industrial Area, Mundhwa, Pune, Maharashtra 411036",arr1);
         Turf t3 = new Turf(503,"TurfUp","Sr No.38/C NIBM Annex Opp Raheja Vista Phase 3, Cloud 9 Road, Pune, Maharashtra 411048",arr2);
@@ -52,6 +52,12 @@ public class TurfRepositoryImpl implements TurfRepository{
     public List<Turf> getAllTurfs() {
        List<Turf> turfList = new ArrayList<>(turf_db.values());
         return turfList;
+    }
+    @Override
+    public Map<Integer,Turf> updateAllTurfs(List<Turf>turfs){
+      turf_db.clear();
+
+          return turf_db;
     }
 
 }

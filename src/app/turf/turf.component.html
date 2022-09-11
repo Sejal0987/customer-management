@@ -1,59 +1,212 @@
-<div class="row" style="margin: 0;">
+<div class="row" style="margin: 0">
   <div class="col-lg-8">
-    <div style="height:200px;border: 3px solid ;margin: 10px;padding: 6px;">
-      <div class="row" style="height: 100%;width: 100%;">
-        <div class="col-lg-8" style="height: inherit;">
-          <img [src]="data.img" style="height:100%;width: 100%;"></div>
+    <div style="height: 200px; border: 3px solid; margin: 10px; padding: 6px">
+      <div class="row" style="height: 100%; width: 100%">
+        <div class="col-lg-8" style="height: inherit">
+          <img [src]="data.img" style="height: 100%; width: 100%" />
+        </div>
         <div class="col-lg-4">
-          <h1 style="text-align:center;font-weight: 900;">{{turfList[data.id].name}}</h1>
-          <h3 style="text-align: center;" >{{data.address}}</h3>
+          <h1 style="text-align: center; font-weight: 900">
+            {{ turfList[data.id - 1].name }}
+          </h1>
+          <h3 style="text-align: center">{{ data.address }}</h3>
         </div>
-        </div>
-
       </div>
-
+    </div>
   </div>
   <div class="col-lg-4">
-    <div class="row" style="height:200px;border:2px solid ;margin: 10px;padding: 3px;">
-    <div class="row" style="justify-content: space-between;">
-      <div class="col-lg-3" style="background-color:rgb(180, 229, 180);height: 50px;margin: 3px;border-radius: 10%;text-align: center;padding-top: 15px;">
-       9:00 - 10:00
+    <div
+      class="row"
+      style="height: 200px; border: 2px solid; margin: 10px; padding: 3px"
+    >
+      <div class="row" style="justify-content: space-between">
+        <div
+          (click)="
+            turfList[data.id - 1].timeSlotsOfSport[0] == true
+              ? (turfList[data.id - 1].timeSlotsOfSport[0] = false)
+              : (turfList[data.id - 1].timeSlotsOfSport[0] = false);
+              sendData()
+          "
+          class="col-lg-3"
+          [ngClass]="
+            turfList[data.id - 1].timeSlotsOfSport[0] ? 'green' : 'red'
+          "
+          style="
+            height: 50px;
+            margin: 3px;
+            border-radius: 10%;
+            text-align: center;
+            padding-top: 15px;
+          "
+        >
+          9:00 - 10:00
+        </div>
 
+        <div
+          (click)="
+            turfList[data.id - 1].timeSlotsOfSport[1] == true
+              ? (turfList[data.id - 1].timeSlotsOfSport[1] = false)
+              : (turfList[data.id - 1].timeSlotsOfSport[1] = false)
+          "
+          class="col-lg-3"
+          [ngClass]="
+            turfList[data.id - 1].timeSlotsOfSport[1] ? 'green' : 'red'
+          "
+          style="
+            height: 50px;
+            margin: 3px;
+            border-radius: 10%;
+            text-align: center;
+            padding-top: 15px;
+          "
+        >
+          10:00-11:00
+        </div>
+        <div
+          (click)="
+            turfList[data.id - 1].timeSlotsOfSport[2] == true
+              ? (turfList[data.id - 1].timeSlotsOfSport[2] = false)
+              : (turfList[data.id - 1].timeSlotsOfSport[2] = false)
+          "
+          class="col-lg-3"
+          [ngClass]="
+            turfList[data.id - 1].timeSlotsOfSport[2] ? 'green' : 'red'
+          "
+          style="
+            height: 50px;
+            margin: 3px;
+            border-radius: 10%;
+            text-align: center;
+            padding-top: 15px;
+          "
+        >
+          11:00-12:00
+        </div>
       </div>
-      <div class="col-lg-3" style="background-color:rgb(234, 142, 130);height: 50px;margin: 3px;border-radius: 10%;text-align: center;padding-top: 15px;">
-       10:00-11:00
-      </div>
-      <div class="col-lg-3" style="background-color:rgb(180, 229, 180);height: 50px;margin: 3px;border-radius: 10%;text-align: center;padding-top: 15px;">
-      11:00-12:00
-      </div>
-    </div>
-    <div  class="row" style="justify-content: space-between;">
-      <div class="col-lg-3" style="background-color:rgba(103, 104, 103, 0.438);height: 50px;margin: 3px;border-radius: 10%;text-align: center;padding-top: 15px;">
-        13:00-14:00
-      </div>
-      <div class="col-lg-3" style="background-color:rgb(180, 229, 180);height: 50px;margin: 3px;border-radius: 10%;text-align: center;padding-top: 15px;">
+      <div class="row" style="justify-content: space-between">
+        <div
+          (click)="
+            turfList[data.id - 1].timeSlotsOfSport[3] == true
+              ? (turfList[data.id - 1].timeSlotsOfSport[3] = false)
+              : (turfList[data.id - 1].timeSlotsOfSport[3] = false)
+          "
+          class="col-lg-3"
+          [ngClass]="
+            turfList[data.id - 1].timeSlotsOfSport[3] ? 'green' : 'red'
+          "
+          style="
+            height: 50px;
+            margin: 3px;
+            border-radius: 10%;
+            text-align: center;
+            padding-top: 15px;
+          "
+        >
+          13:00-14:00
+        </div>
+        <div
+          (click)="
+            turfList[data.id - 1].timeSlotsOfSport[4] == true
+              ? (turfList[data.id - 1].timeSlotsOfSport[4] = false)
+              : (turfList[data.id - 1].timeSlotsOfSport[4] = false)
+          "
+          class="col-lg-3"
+          [ngClass]="
+            turfList[data.id - 1].timeSlotsOfSport[4] ? 'green' : 'red'
+          "
+          style="
+            height: 50px;
+            margin: 3px;
+            border-radius: 10%;
+            text-align: center;
+            padding-top: 15px;
+          "
+        >
           14:00-15:00
+        </div>
+        <div
+          (click)="
+            turfList[data.id - 1].timeSlotsOfSport[5] == true
+              ? (turfList[data.id - 1].timeSlotsOfSport[5] = false)
+              : (turfList[data.id - 1].timeSlotsOfSport[5] = false)
+          "
+          class="col-lg-3"
+          [ngClass]="
+            turfList[data.id - 1].timeSlotsOfSport[5] ? 'green' : 'red'
+          "
+          style="
+            height: 50px;
+            margin: 3px;
+            border-radius: 10%;
+            text-align: center;
+            padding-top: 15px;
+          "
+        >
+          15:00-16:00
+        </div>
       </div>
-      <div class="col-lg-3" style="background-color:rgb(234, 142, 130);height: 50px;margin: 3px;border-radius: 10%;text-align: center;padding-top: 15px;">
-  15:00-16:00
+      <div class="row" style="justify-content: space-between">
+        <div
+          (click)="
+            turfList[data.id - 1].timeSlotsOfSport[6] == true
+              ? (turfList[data.id - 1].timeSlotsOfSport[6] = false)
+              : (turfList[data.id - 1].timeSlotsOfSport[6] = false)
+          "
+          class="col-lg-3"
+          [ngClass]="
+            turfList[data.id - 1].timeSlotsOfSport[6] ? 'green' : 'red'
+          "
+          style="
+            height: 50px;
+            margin: 3px;
+            border-radius: 10%;
+            text-align: center;
+            padding-top: 15px;
+          "
+        >
+          16:00-17:00
+        </div>
+        <div
+          (click)="
+            turfList[data.id - 1].timeSlotsOfSport[7] == true
+              ? (turfList[data.id - 1].timeSlotsOfSport[7] = false)
+              : (turfList[data.id - 1].timeSlotsOfSport[7] = false)
+          "
+          class="col-lg-3"
+          [ngClass]="
+            turfList[data.id - 1].timeSlotsOfSport[7] ? 'green' : 'red'
+          "
+          style="
+            height: 50px;
+            margin: 3px;
+            border-radius: 10%;
+            text-align: center;
+            padding-top: 15px;
+          "
+        >
+          17:00-18:00
+        </div>
+        <div
+          (click)="
+            turfList[data.id - 1].timeSlotsOfSport[8] == true
+              ? (turfList[data.id - 1].timeSlotsOfSport[8] = false)
+              : (turfList[data.id - 1].timeSlotsOfSport[8] = false)
+          "
+          class="col-lg-3"
+          [ngClass]="
+            turfList[data.id - 1].timeSlotsOfSport[8] ? 'green' : 'red'
+          "
+          style="
+            height: 50px;
+            margin: 3px;
+            border-radius: 10%;
+            text-align: center;
+            padding-top: 15px;
+          "
+        >
+          18:00-19:00
+        </div>
       </div>
     </div>
-    <div class="row" style="justify-content: space-between;">
-      <div class="col-lg-3" style="background-color:rgb(180, 229, 180);height: 50px;margin: 3px;border-radius: 10%;text-align: center;padding-top: 15px;">
-        16:00-17:00
-      </div>
-      <div class="col-lg-3" style="background-color:rgb(234, 142, 130);height: 50px;margin: 3px;border-radius: 10%;text-align: center;padding-top: 15px;">
-         17:00-18:00
-      </div>
-      <div class="col-lg-3" style="background-color:rgb(180, 229, 180);height: 50px;margin: 3px;border-radius: 10%;text-align: center;padding-top: 15px;">
-       18:00-19:00
-      </div>
-    </div>
-     </div>
-
-
-
-
   </div>
 </div>
-

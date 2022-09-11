@@ -14,9 +14,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 
 public class Turf {
+  @JsonProperty("turf_id")
     private int turf_id;
+    @JsonProperty("name")
     private String name;
+    @JsonProperty("location")
     private String location;
+    @JsonProperty("timeSlotsOfSport")
     private Boolean []timeSlotsOfSport;
 
 

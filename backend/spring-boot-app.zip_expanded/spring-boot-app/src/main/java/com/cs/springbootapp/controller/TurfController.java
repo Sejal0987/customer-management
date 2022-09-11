@@ -39,6 +39,10 @@ public class TurfController{
         return turfService.deleteTurf(id);
     }
 
+    @PostMapping("/turfs/")
+    public Map<Integer,Turf> updateAllTurfs(@RequestBody List<Turf>turfs){
+      return turfService.updateAllTurfs(turfs);
+    }
 
 
 
