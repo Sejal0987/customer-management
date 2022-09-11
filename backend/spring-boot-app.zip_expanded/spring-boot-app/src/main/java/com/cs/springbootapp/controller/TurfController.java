@@ -11,7 +11,7 @@ import com.cs.springbootapp.service.TurfService;
 
 
 @RestController
-@CrossOrigin(origins ={"http://localhost:4200/booking/FootBall","http://localhost:4200"} )
+@CrossOrigin(origins ={"http://localhost:4200/turf/501","http://localhost:4200"} )
 
 public class TurfController{
 
@@ -42,6 +42,14 @@ public class TurfController{
     @PostMapping("/turfs/")
     public Map<Integer,Turf> updateAllTurfs(@RequestBody List<Turf>turfs){
       return turfService.updateAllTurfs(turfs);
+    }
+
+    @PutMapping("/turf/{turf_id}")
+    public void updateTurf(@RequestBody int time, @RequestParam int turf_id){
+       Turf newturf= turfService.getTurf(turf_id);
+       newturf.getTimeSlotsOfSport()[time]=false;
+       turfService.saveTurf(newturf);
+
     }
 
 

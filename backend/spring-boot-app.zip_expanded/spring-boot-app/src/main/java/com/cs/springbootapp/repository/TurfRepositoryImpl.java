@@ -32,13 +32,11 @@ public class TurfRepositoryImpl implements TurfRepository{
 
     @Override
     public Turf getTurf(int id) {
-
         return turf_db.get(id);
     }
 
     @Override
     public Turf saveTurf(Turf turf) {
-
         return turf_db.put(turf.getTurf_id(), turf);
     }
 

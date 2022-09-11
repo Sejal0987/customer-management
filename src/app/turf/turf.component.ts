@@ -27,7 +27,14 @@ export class TurfComponent implements OnInit {
   sendData(){
     // console.log(this.turfList);
     this._turfClient.updateAllTurfs(this.turfList);
+    this._turfClient.updateTurf(1).subscribe(
+      data=>{
+        console.log(data);
+
+      }
+    );
   }
+
   ngOnInit(): void {
   this.fetchData();
   console.log(this.turfList);

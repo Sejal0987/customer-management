@@ -20,6 +20,7 @@ import { CustomCardComponent } from './custom-card/custom-card.component';
 import { BookingComponent } from './booking/booking.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { TurfComponent } from './turf/turf.component';
+import { SlotsComponent } from './slots/slots.component';
 
 
 @NgModule({
@@ -33,13 +34,16 @@ import { TurfComponent } from './turf/turf.component';
     CustomCardComponent,
     BookingComponent,
     MainContentComponent,
-    TurfComponent
+    TurfComponent,
+    SlotsComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       {path: 'login', component: LoginComponent},
-      {path:'booking/:name',component:BookingComponent},
+      // {path:'booking/:name',component:BookingComponent},
+      {path:'turf/501',component:BookingComponent},
+
       {path: 'mainpage', component: MainPageComponent, canActivate: [AuthGuardService]},
       {path: '**', component: LoginComponent},
 

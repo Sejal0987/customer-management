@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { Turf } from './Turf';
-
-
 @Injectable({
   providedIn: 'root'
 })
@@ -20,5 +18,11 @@ export class ClientDataService {
     console.log(turfs);
     return this._http.post<Array<Turf>>(this.baseUrl2,turfs);
   }
+  updateTurf(id:number){
+    return this._http.put<number>(this.baseUrl,id);
+  }
+
+
+
 
 }
